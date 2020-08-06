@@ -4,5 +4,17 @@
  * @returns {Boolean}
  */
 function isEmpty(obj) {
-  // ваш код...
+  for (const key in obj) {
+    
+       
+    if ((typeof(key)==="string")){
+      return false;
+    }
+
+
+    
+    
+  }
+
+  return true;
 }
