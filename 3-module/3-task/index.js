@@ -3,5 +3,22 @@
  * @returns {string}
  */
 function camelize(str) {
-  // ваш код...
+  return str.split("")
+  
+    .map( (char, i, arr)=>{
+
+      if (char === "-") {
+        return;
+      } else if (arr[i-1] === "-"){
+        return char.toUpperCase();
+      }
+
+      return char;
+      
+
+    })
+
+    .join("");
+
+
 }
