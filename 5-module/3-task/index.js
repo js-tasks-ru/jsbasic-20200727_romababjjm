@@ -24,7 +24,10 @@ function initCarousel() {
     }
 
 
-    if ( numberOfSlides ===((-transformValue)/transformWidth+1)){
+    let isLastSlide = numberOfSlides ===((-transformValue)/transformWidth+1);
+
+
+    if ( isLastSlide ){
       arrRight.style.display = "none";
     } else {
       arrRight.style.display = "";
