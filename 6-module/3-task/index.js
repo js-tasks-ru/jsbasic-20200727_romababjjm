@@ -45,11 +45,7 @@ export default class Carousel {
             return slideDiv;
       }
 
-      // cardDiv.querySelector(".card__button").addEventListener("click", function(){
-        
-      //   this.dispatchEvent( new CustomEvent("product-add", { detail: product.id, bubbles: true }) );
 
-      // })
 
         function initCarousel() {
       
