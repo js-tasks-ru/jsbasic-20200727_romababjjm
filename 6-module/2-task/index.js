@@ -1,5 +1,5 @@
 import createElement from '../../assets/lib/create-element.js';
-import createNodeElement from '../../assets/customFunc/createNodeElement.js';
+import createNodeElement from '../../assets/lib/createNodeElement.js';
 export default class ProductCard {
   constructor(product) {
 

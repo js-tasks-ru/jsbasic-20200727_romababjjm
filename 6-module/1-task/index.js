@@ -28,7 +28,7 @@
  *
  * @constructor
  */
-import createNodeElement from '../../assets/customFunc/createNodeElement.js';
+import createNodeElement from '../../assets/lib/createNodeElement.js';
 
 export default class UserTable {
   
