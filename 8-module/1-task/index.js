@@ -22,7 +22,7 @@ export default class CartIcon {
         </div>`;
 
       this.updatePosition();
-
+      this.initialTopCoord = this.elem.getBoundingClientRect().top + window.pageYOffset;
       this.elem.classList.add('shake');
       this.elem.addEventListener('transitionend', () => {
         this.elem.classList.remove('shake');
@@ -39,6 +39,39 @@ export default class CartIcon {
   }
 
   updatePosition() {
-    // ваш код ...
+    
+    
+    if (window.pageYOffset > this.initialTopCoord) {
+      let leftIndent = Math.min(
+        document.querySelector('.container').getBoundingClientRect().right + 20,
+        document.documentElement.clientWidth - this.elem.offsetWidth - 10
+      );
+      
+      Object.assign(this.elem.style, {
+        position: 'fixed',
+        top: '50px',
+        zIndex: 1e3,
+        right: '10px',
+        left: `${leftIndent}px`
+      });
+
+      let isMobile = document.documentElement.clientWidth <= 767;
+      if (isMobile) {
+        Object.assign(this.elem.style, {
+          position: '',
+          top: '',
+          left: '',
+          zIndex: ''
+        });
+      } 
+
+    } else {
+      Object.assign(this.elem.style, {
+        position: '',
+        top: '',
+        left: '',
+        zIndex: ''
+      });
+    }
   }
 }

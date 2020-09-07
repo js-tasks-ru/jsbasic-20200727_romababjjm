@@ -13,7 +13,7 @@ export default class ProductCard {
 
     let template = `
   
-    <div class="card">
+    
     <div class="card__top">
         <img src="/assets/images/products/${product.image}" class="card__image" alt="product">
         <span class="card__price">€${product.price.toFixed(2)}</span>
@@ -24,7 +24,7 @@ export default class ProductCard {
             <img src="/assets/images/icons/plus-icon.svg" alt="icon">
         </button>
     </div>
-    </div>
+    
 
 `
       
