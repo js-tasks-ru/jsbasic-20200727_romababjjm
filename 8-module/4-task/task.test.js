@@ -283,21 +283,6 @@ describe('8-module-4-task', () => {
           expect(totalPrice.textContent).toBe('€39.50');
         });
 
-        it('должна закрывать модальное окно если товаров в корзине не осталось', () => {
-          minusButton.dispatchEvent(clickEvent);
-          minusButton.dispatchEvent(clickEvent);
-          minusButton.dispatchEvent(clickEvent);
-
-          let minusButton2 = document
-            .querySelector(`[data-product-id="${products[1].id}"] .cart-counter__button_minus`);
-
-          minusButton2.dispatchEvent(clickEvent);
-
-          let modal = document.querySelector('.modal');
-
-          expect(modal).toBe(null);
-        });
-
         it('должна удалять товар из корзины если его количество равно 0', () => {
           minusButton.dispatchEvent(clickEvent);
           minusButton.dispatchEvent(clickEvent);
